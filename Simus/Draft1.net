@@ -1,0 +1,23 @@
+* D:\nacho\Generador de ruido\Simus\Draft1.asc
+R1 N001 N006 8
+V1 N001 0 12
+C1 N001 0 470µ
+R2 N001 N002 1k
+Q1 N001 N002 N003 0 BC337-40
+Q2 N004 N009 0 0 NPN
+Q3 0 N004 N007 0 BC327-40
+R3 N003 N005 0.47
+R4 N005 N007 0.47
+R5 N002 N004 150
+C2 N004 N009 47p
+R6 N004 N009 12k
+R7 N009 0 1800
+V2 N008 0 SINE(0 3 2k)
+C3 N006 N005 470µ V=50 Irms=1.8 Rser=0.045 Lser=7n mfg="Würth Elektronik" pn="860040675011 WCAP-ATUL 10x30" type="Al electrolytic"
+C4 N009 N008 10n
+.model NPN NPN
+.model PNP PNP
+.lib C:\Users\nacho\AppData\Local\LTspice\lib\cmp\standard.bjt
+.tran .001
+.backanno
+.end
